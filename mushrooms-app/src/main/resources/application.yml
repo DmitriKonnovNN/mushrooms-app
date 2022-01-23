@@ -1,0 +1,32 @@
+
+
+management:
+  server:
+    port: 9001
+  endpoints:
+    web:
+      exposure:
+        include: health, info, beans
+  endpoint:
+    health:
+      show-components: always
+
+spring:
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+  r2dbc:
+    pool:
+      enabled: true
+      initial-size: 50
+      max-size: 100
+      max-idle-time: 30
+    url: r2dbc:postgresql://postgres@localhost:5432/
+    username: postgres
+    password: P@ssw0rd
+logging:
+  level:
+    org:
+      springframework:
+        r2dbc=DEBUG:
