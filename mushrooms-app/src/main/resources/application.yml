@@ -6,11 +6,17 @@ management:
   endpoints:
     web:
       exposure:
-        include: health, info, beans
+        include: "*"
+      base-path: /actuator/admin
   endpoint:
     health:
       show-components: always
-
+      show-details: always
+info:
+  app:
+    name: Mushrooms Application
+    description: up- and download your mushrooms with their geolocation
+    version: snapshot 1.0
 spring:
   data:
     r2dbc:
