@@ -1,5 +1,3 @@
-
-
 management:
   server:
     port: 9001
@@ -36,3 +34,4 @@ logging:
     org:
       springframework:
         r2dbc=DEBUG:
+
