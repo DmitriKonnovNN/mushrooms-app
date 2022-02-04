@@ -1,6 +1,6 @@
 management:
   server:
-    port: 9001
+    port: 9002
   endpoints:
     web:
       exposure:
@@ -35,3 +35,8 @@ logging:
       springframework:
         r2dbc=DEBUG:
 
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+  port: 8081

@@ -1,5 +1,6 @@
 package io.dmitrikonnov.mushroomsapp;
 
+import io.dmitrikonnov.mushroomsapp.service.MushroomService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,11 +11,15 @@ import reactor.core.publisher.Mono;
 
 @RestController("/v*/mushrooms")
 public class MushroomController {
+
+    MushroomService mushroomService;
+
+
 /*
 
     @GetMapping("/")
-    public Flux<ResponseEntity<Mushroom>> getAllMushrooms (){
-        return mushroomService.findAllMushrooms;
+    public Flux<Mushroom> getAllMushrooms (){
+        return mushroomService.findAllMushrooms();
     }
 
     @GetMapping("/{id}/")
@@ -22,5 +27,6 @@ public class MushroomController {
         return mushroomService.getById();
     }
 */
+
 
 }

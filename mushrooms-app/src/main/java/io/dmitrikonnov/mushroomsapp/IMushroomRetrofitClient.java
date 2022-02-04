@@ -6,7 +6,7 @@ import retrofit2.http.Query;
 
 import java.util.List;
 
-public interface IMushroomRetrofitDao {
+public interface IMushroomRetrofitClient {
     @GET("/observation")
     Call<List<Mushroom>> getMushrooms (@Query("Combined_Name") String combinedName);
 }
